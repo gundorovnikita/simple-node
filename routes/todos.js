@@ -9,6 +9,14 @@ router.get('/',async(req,res)=>{
 		todos
 	});
 })
+router.get('/post/:name',async(req,res)=>{
+	const todos = await Todo.findOne({title:req.params.name});
+	res.render('detail', { 
+		title: 'detail' ,
+		todos,
+	});
+})
+
 router.get('/create',(req,res)=>{
 	res.render('create', { title: 'create' });
 })

@@ -7,11 +7,13 @@
 			<label>
 
 
-					<span class="completed">{{title}}</span>
-
+					<a href="/post/{{title}}">{{title}}</a>
+				<br>
+				<br>
 				<input type="hidden" value="{{_id}}" name="id">
 
 				<button type="submit">Delete</button>
+				<hr>
 			</label>
 		</form>
 	</li>
@@ -20,3 +22,5 @@
 {{else}}
 <p>No todos</p>
 {{/if}}
+<script>
+</script>
